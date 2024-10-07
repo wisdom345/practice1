@@ -1,0 +1,155 @@
+/** @format */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+body,
+html {
+  scroll-behavior: smooth;
+  outline: none;
+}
+
+body {
+  background: color-mix(in srgb, #000 85%, blue 15%);
+  color: #fff;
+}
+
+.container_wrapper {
+  max-width: 1024px;
+  width: 100%;
+  margin: auto;
+  clear: both;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.container_wrapper nav {
+  display: flex;
+  height: 80px;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.container_wrapper nav .logo_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.container_wrapper nav .logo_container .logo-text {
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: linear-gradient(to right, purple, deepskyblue);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.container_wrapper nav .logo_container .logo {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_wrapper nav .logo_container .logo img {
+  width: 100%;
+}
+
+.container_wrapper nav .nav_links {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.container_wrapper nav .nav_links li {
+  list-style: none;
+}
+
+.container_wrapper nav .nav_links li a {
+  text-decoration: none;
+  color: #fff;
+  text-wrap: nowrap;
+  font-size: 16px;
+}
+
+.container_wrapper nav .social_icons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 20px;
+  font-size: 16px;
+}
+
+.container_wrapper nav .social_icons a {
+  text-decoration: none;
+  color: #fff;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+
+.main-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 200px;
+}
+
+main .article {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+main .article p,
+main .article h1 {
+  text-align: center;
+}
+
+main .main-button button {
+  background: linear-gradient(to right, purple, deepskyblue);
+  color: #fff;
+  padding: 12px 24px;
+  border-style: none;
+}
+@media (min-width: 740px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main-img {
+    grid-row: span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container_wrapper nav .nav_links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  main .article p,
+  main .article h1 {
+    text-align: left;
+  }
+}
